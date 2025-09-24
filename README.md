@@ -1,19 +1,36 @@
-# etl-sales-data
-A collaborative project with AI (Chatgpt)
+# 📊L Sales Data Project
 
-# ETL Sales Data Project
+This project demonstrates a simple **ETL (Extract, Transform, Load) pipeline** using Python and pandas.  
+It is designed for practicing **data engineering workflows** and **Git collaboration**.
 
-This project simulates a simple ETL (Extract, Transform, Load) pipeline for sales data.  
+---
 
-## Steps
-1. **Extract** → Load raw sales data from `data/raw_sales.csv`
-2. **Transform** → Clean missing values, standardize column names, and create derived fields
-3. **Load** → Save the cleaned dataset into a new CSV file
+## 📂 Project Structure
+```mermaid
+graph TD
+A[etl-sales-data] --> B[data]
+  B --> B1[raw_sales.csv]
+  A --> C[etl]
+  C --> C1[etl_pipeline.py]
+  A --> D[README.md]
+```
+---
 
-## Tech Stack
-- Python (pandas)
-- CSV data source
+## ⚙️ Features
+- **Extract**: Loads raw sales data from `data/raw_sales.csv`
+- **Transform**:
+  - Clean column names (e.g., spaces → underscores, lowercase)
+  - Handle missing values (e.g., missing prices)
+  - Add derived fields (e.g., `total_sales = quantity * price`)
+- **Load**: Saves the cleaned dataset into a new CSV file (`data/clean_sales.csv`)
 
-## How to Run
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
 ```bash
-python etl/etl_pipeline.py
+git clone https://github.com/DevMuzee/etl-sales-data.git
+cd etl-sales-data
+```
+
