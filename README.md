@@ -1,4 +1,4 @@
-# 📊L Sales Data Project
+# 📊Sales Data Project
 
 A hands-on project demonstrating a complete **ETL (Extract, Transform, Load) pipeline** for sales data using **Python** and **pandas**.  
 The repository is designed for practicing **data engineering workflows**, **Git collaboration**, and **real-world data cleaning tasks**.
