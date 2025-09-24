@@ -17,8 +17,14 @@ url_repo['price'].fillna(url_repo['price'].mean(), inplace=True)
 
 #Adding a new column total_sales
 url_repo['total_sales']= url_repo['quantity'] * url_repo['price']
-url_repo['total_sales']= url_repo['total_sales'].round(2)
+url_repo['total_sales']= url_repo['total_sales'].round(0).astype(int)
 #url_repo['total_sales']= url_repo['total_sales'].map('{:.2f}'.format).astype(float)
+
+#--converting order_date to datetime format
+url_repo['date']= pd.to_datetime(url_repo['date'])
+#--- rounding price to a whole number
+url_repo['price']= url_repo['price'].round(0).astype(int)
+#print(url_repo.dtypes)
 print(url_repo.head())
 
 #saved the cleaned data to local repository
