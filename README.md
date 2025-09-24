@@ -48,7 +48,7 @@ A[etl-sales-data] --> B[data]
 ### 2. Transform
 - Standardize column names (lowercase, underscores instead of spaces).  
 - Handle missing values:
-  - Replace missing `Price` values with `0`.  
+  - Replace missing `Price` values with `mean of the total value`.  
 - Add derived fields:
   - `total_sales = quantity * price`  
 - Ensure clean, consistent output ready for analysis.  
